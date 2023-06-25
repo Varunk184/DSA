@@ -1,0 +1,5 @@
+day 1 = basic problem
+day 2 = array
+day 3 = 2d array
+day 4 = sorting
+day 5 = recursion
