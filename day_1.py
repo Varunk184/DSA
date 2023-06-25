@@ -18,6 +18,14 @@ class Linkedlist:
         while itr.next:
             itr=itr.next
         itr.next=Node(data,None)
+
+
+
+    def insert_value(self,data_list):
+        self.head= None
+        for i in data_list:
+            self.inc_at_end(i)
+
     def display(self):
         itr = self.head
         li=" "
@@ -32,7 +40,9 @@ class Linkedlist:
 
 if __name__=="__main__":
     ll = Linkedlist()
-    ll.inc_at_beg(54)
-    ll.inc_at_beg(3)
-    ll.inc_at_end(56)
+   # ll.inc_at_beg(54)
+    #ll.inc_at_beg(3)
+    #ll.inc_at_end(56)
+    ll.insert_value(["A","B","C","D"])
+
     ll.display()
