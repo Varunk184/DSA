@@ -26,6 +26,47 @@ class Linkedlist:
         for i in data_list:
             self.inc_at_end(i)
 
+    def counter(self):
+        count = 0
+        itr = self.head
+        while itr:
+            count+=1
+            itr=itr.next
+        return count
+    def remove_at(self,index):
+        if index<0 or index>self.counter():
+            raise Exception("Invalid Index")
+        
+        if index==0:
+            self.head=self.head.next
+            return
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index-1:
+                itr.next = itr.next.next
+                break
+            itr=itr.next
+            count+=1
+
+    def remove_at(self,index):
+        if index<0  or index >=self.counter():
+            raise Exception("Invalid index")
+        if index==0:
+            self.head=self.head.next
+            return
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index -1:
+                itr.next=itr.next.next
+                break
+            count+=1
+            itr=itr.next
+
+    
+
+
     def display(self):
         itr = self.head
         li=" "
@@ -44,5 +85,6 @@ if __name__=="__main__":
     #ll.inc_at_beg(3)
     #ll.inc_at_end(56)
     ll.insert_value(["A","B","C","D"])
+    print(ll.counter())
 
     ll.display()
