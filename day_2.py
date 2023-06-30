@@ -49,6 +49,17 @@ class Node:
             res=res+self.postOrder(root.right)
             res.append(root.data)
         return res
+    def sum_of_left(self):
+        list1=[]
+        if data<self.data:
+            list1.append(data)
+            print(sum(list1))
+            return
+
+            
+    
+
+
 root = Node(27)
 root.insert(14)
 root.insert(35)
@@ -57,4 +68,5 @@ root.insert(28)
 root.printt()
 print(root.inOrder(root))
 print(root.preOrder(root))
-print(root.postOrder(root)) 
+print(root.postOrder(root))
+print(root.sum_of_left)
